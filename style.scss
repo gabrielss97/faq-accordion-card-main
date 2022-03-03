@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// Primary-text
+$pt-very-dark-blue: hsl(238, 29%, 16%);
+$pt-dark-blue: hsl(240, 6%, 50%);
+
+// Primary-gradient
+$pg-soft-violet: hsl(273, 75%, 66%);
+$pg-soft-blue: hsl(240, 73%, 65%);
+
+// Neutral-text
+$nt-very-dark-blue: hsl(237, 12%, 33%);
+$nt-dark-blue: hsl(240, 6%, 50%);
+
+// Neutral-dividers
+$nd-grayish-blue: hsl(240, 4%, 91%);
+
+// Hover-color
+$hover-orange: hsl(14, 88%, 65%);
+
+// Base-typography
+$body-fs: 12px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $body-fs;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, $pg-soft-violet 0%, $pg-soft-blue 100%);
+  margin: 29px 24px 400px 24px;
+}
+
+//global classes
+.flex {
+  display: flex;
+
+  &-center {
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+}
+
+//component css
+.container {
+  position: absolute;
+  top: -50px;
+
+  .woman {
+    margin-right: 25px;
+    position: relative;
+    top: 60px;
+    z-index: 2;
+
+    &-shadow {
+      position: relative;
+      top: -35px;
+      z-index: 1;
+    }
+  }
+
+  .sub-container {
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    top: -130px;
+    z-index: 0;
+    padding: 124px 24px 48px 24px;
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 32px;
+    }
+
+    .boxes {
+      width: 280px;
+      .box {
+        border-bottom: 1px solid $nd-grayish-blue;
+
+        .visible {
+          width: 279px;
+          height: 40px;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            font-size: 13px;
+            line-height: 16px;
+            letter-spacing: 0px;
+          }
+        }
+
+        .hidden {
+          display: none;
+          margin: 0px 25px 10px 0;
+          font-size: 12px;
+          line-height: 18px;
+          color: $nt-dark-blue;
+        }
+      }
+    }
+  }
+}
+
+// JS classes
+
+.bold {
+  font-weight: bold;
+}
+
+@media (min-width: 1440px) {
+  .box:hover {
+    color: $hover-orange;
+    transition: 0.3s;
+  }
+}

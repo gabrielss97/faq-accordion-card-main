@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(180deg, #af67e9 0%, #6565e7 100%);
+  margin: 29px 24px 400px 24px;
+}
+
+.flex {
+  display: flex;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.container {
+  position: absolute;
+  top: -50px;
+}
+.container .woman {
+  margin-right: 25px;
+  position: relative;
+  top: 60px;
+  z-index: 2;
+}
+.container .woman-shadow {
+  position: relative;
+  top: -35px;
+  z-index: 1;
+}
+.container .sub-container {
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+  top: -130px;
+  z-index: 0;
+  padding: 124px 24px 48px 24px;
+}
+.container .sub-container h1 {
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+.container .sub-container .boxes {
+  width: 280px;
+}
+.container .sub-container .boxes .box {
+  border-bottom: 1px solid #e7e7e9;
+}
+.container .sub-container .boxes .box .visible {
+  width: 279px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .sub-container .boxes .box .visible p {
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0px;
+}
+.container .sub-container .boxes .box .hidden {
+  display: none;
+  margin: 0px 25px 10px 0;
+  font-size: 12px;
+  line-height: 18px;
+  color: #787887;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (min-width: 1440px) {
+  .box:hover {
+    color: #f47c57;
+    transition: 0.3s;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
