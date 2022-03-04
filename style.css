@@ -6,15 +6,14 @@
 }
 
 body {
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Kumbh Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   background: linear-gradient(180deg, #af67e9 0%, #6565e7 100%);
-  margin: 29px 24px 400px 24px;
+  margin-top: 120px;
 }
 
 .flex {
@@ -29,27 +28,33 @@ body {
 }
 
 .container {
-  position: absolute;
-  top: -50px;
+  background-color: white;
+  border-radius: 23px;
+  box-shadow: 0px 50px 50px -20px #35127a7f;
 }
 .container .woman {
-  margin-right: 25px;
+  width: 266px;
+  height: 196px;
   position: relative;
-  top: 60px;
-  z-index: 2;
+  top: -107px;
+  left: -10px;
+}
+.container .woman-design {
+  width: 266px;
+  height: 196px;
+  background-image: url("./images/illustration-woman-online-mobile.svg");
 }
 .container .woman-shadow {
+  background-image: url("./images/bg-pattern-mobile.svg");
+  width: 240px;
+  height: 104px;
   position: relative;
-  top: -35px;
-  z-index: 1;
+  top: -95px;
+  left: 25px;
 }
 .container .sub-container {
-  border-radius: 20px;
-  background-color: white;
-  position: relative;
-  top: -130px;
-  z-index: 0;
-  padding: 124px 24px 48px 24px;
+  padding: 0 24px 48px 24px;
+  margin-top: -75px;
 }
 .container .sub-container h1 {
   margin-bottom: 25px;
@@ -85,6 +90,45 @@ body {
 }
 
 @media (min-width: 1440px) {
+  body {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .container {
+    flex-direction: row;
+    width: 60vw;
+    min-height: 509px;
+  }
+  .container .woman {
+    flex-grow: 2;
+  }
+  .container .woman-design {
+    background-image: url("./images/illustration-woman-online-desktop.svg");
+    width: 472px;
+    height: 359px;
+  }
+  .container .woman-shadow {
+    background-image: url("./images/bg-pattern-desktop.svg");
+    width: 472px;
+    height: 462px;
+    background-size: cover;
+    position: relative;
+    top: -413px;
+    left: -4px;
+  }
+  .container .sub-container {
+    flex-grow: 1;
+    align-items: flex-start;
+  }
+  .container .sub-container h1 {
+    padding-top: 25%;
+  }
+  .container .sub-container .boxes .box .visible {
+    width: 320px;
+    height: 50px;
+  }
+
   .box:hover {
     color: #f47c57;
     transition: 0.3s;

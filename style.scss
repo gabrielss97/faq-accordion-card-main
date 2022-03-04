@@ -19,7 +19,7 @@ $nd-grayish-blue: hsl(240, 4%, 91%);
 $hover-orange: hsl(14, 88%, 65%);
 
 // Base-typography
-$body-fs: 12px;
+$body-fs: 14px;
 
 * {
   margin: 0;
@@ -32,11 +32,10 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100vh;
   background: linear-gradient(180deg, $pg-soft-violet 0%, $pg-soft-blue 100%);
-  margin: 29px 24px 400px 24px;
+  margin-top: 120px;
 }
 
 //global classes
@@ -55,29 +54,36 @@ body {
 
 //component css
 .container {
-  position: absolute;
-  top: -50px;
+  background-color: white;
+  border-radius: 23px;
+  box-shadow: 0px 50px 50px -20px #35127a7f;
 
   .woman {
-    margin-right: 25px;
+    width: 266px;
+    height: 196px;
     position: relative;
-    top: 60px;
-    z-index: 2;
+    top: -107px;
+    left: -10px;
+
+    &-design {
+      width: 266px;
+      height: 196px;
+      background-image: url("./images/illustration-woman-online-mobile.svg");
+    }
 
     &-shadow {
+      background-image: url("./images/bg-pattern-mobile.svg");
+      width: 240px;
+      height: 104px;
       position: relative;
-      top: -35px;
-      z-index: 1;
+      top: -95px;
+      left: 25px;
     }
   }
 
   .sub-container {
-    border-radius: 20px;
-    background-color: white;
-    position: relative;
-    top: -130px;
-    z-index: 0;
-    padding: 124px 24px 48px 24px;
+    padding: 0 24px 48px 24px;
+    margin-top: -75px;
 
     h1 {
       margin-bottom: 25px;
@@ -120,7 +126,58 @@ body {
   font-weight: bold;
 }
 
+//Responsive Style
+
 @media (min-width: 1440px) {
+  body {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .container {
+    flex-direction: row;
+    width: 60vw;
+    min-height: 509px;
+
+    .woman {
+      flex-grow: 2;
+
+      &-design {
+        background-image: url("./images/illustration-woman-online-desktop.svg");
+        width: 472px;
+        height: 359px;
+      }
+
+      &-shadow {
+        background-image: url("./images/bg-pattern-desktop.svg");
+        width: 472px;
+        height: 462px;
+        background-size: cover;
+        position: relative;
+        top: -413px;
+        left: -4px;
+      }
+    }
+
+    .sub-container {
+      flex-grow: 1;
+      align-items: flex-start;
+
+      h1 {
+        padding-top: 25%;
+      }
+
+      .boxes {
+        .box {
+          .visible {
+            width: 320px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
   .box:hover {
     color: $hover-orange;
     transition: 0.3s;
